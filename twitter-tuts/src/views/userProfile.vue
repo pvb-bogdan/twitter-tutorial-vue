@@ -45,10 +45,14 @@
         state.user.twitts.unshift({ id: state.user.twitts.length + 1, content: twitt });
       }
 
+      function toggleFavourite () {
+        console.log('xxx')
+      }
       return {
         state,
         addNewTwitt,
-        userId
+        userId,
+        toggleFavourite
       }
     }
   }

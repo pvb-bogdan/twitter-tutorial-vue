@@ -18,11 +18,19 @@
         required: true
       }
     },
-    methods: {
-      favouriteTwitt(id) {
-        this.$emit('favourite', id)
+    setup (props, context) {
+      function favouriteTwitt(id) {
+        context.emit('favourite', id)
+      }
+      return {
+        favouriteTwitt
       }
     }
+    // methods: {
+    //   favouriteTwitt(id) {
+    //     this.$emit('favourite', id)
+    //   }
+    // }
   }
 </script>
 
